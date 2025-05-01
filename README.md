@@ -54,3 +54,47 @@ This project simulates secure chat using a **hybrid cryptography model**:
 - Required libraries:
   ```bash
   pip install pycryptodome
+
+🧪 Run the App:
+bash
+Copy
+Edit
+python chat_gui.py
+🗃️ Project Structure
+graphql
+Copy
+Edit
+AES-RSA-CommSim/
+├── aes_simulation.py         # AES + HMAC encryption/decryption
+├── rsa_key_exchange.py       # RSA key generation and AES key exchange
+├── chat_gui.py               # Main Tkinter GUI interface
+├── README.md                 # Project documentation
+└── requirements.txt          # Dependencies (optional)
+✨ Educational Value
+This simulation is a simplified model of how secure messaging apps like WhatsApp, Signal, or Telegram manage encrypted chats — combining:
+
+Symmetric encryption (AES) for fast data encryption
+
+Asymmetric encryption (RSA) for secure key exchange
+
+HMAC to ensure data hasn’t been tampered with
+
+Perfect for:
+
+Cybersecurity students
+
+Cryptography beginners
+
+Python hobbyists
+
+Demoing hybrid encryption
+
+📜 License
+MIT License — free to use, modify, and distribute.
+
+🤝 Contributing
+Got ideas? Want to add quantum encryption or better UI?
+Feel free to fork the repo and open a pull request.
+
+📬 Contact
+Made with ❤️ 
