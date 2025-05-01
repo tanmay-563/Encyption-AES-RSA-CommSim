@@ -1,4 +1,4 @@
-pycryptodome==3.15.0
+pycryptodome
 nltk 
 tkinter
 numpy
