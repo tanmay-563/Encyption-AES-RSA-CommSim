@@ -43,7 +43,7 @@ This project simulates secure chat using a **hybrid cryptography model**:
 
 > Chat window with encrypted and decrypted views:
 
-![screenshot](assets/demo-screenshot.png) <!-- optional, add your screenshot -->
+![screenshot](AES Simulation\assets\demo-background.png) <!-- optional, add your screenshot -->
 
 ---
 
