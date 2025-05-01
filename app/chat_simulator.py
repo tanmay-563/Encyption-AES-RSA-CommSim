@@ -25,9 +25,8 @@ chat_log = scrolledtext.ScrolledText(window, width=60, height=20, state='disable
 chat_log.pack(pady=10)
 
 # Configure user input field
-user_input = tk.Entry(window, width=50, font=("Helvetica", 12), bd=3, relief="solid", fg="black", bg="#ECF0F1")
-user_input.pack(side=tk.LEFT, padx=5, ipady=5)  # ipady adds internal vertical padding
-
+user_input = tk.Entry(window, width=50, font=("Helvetica", 12), bd=2, relief="solid", fg="black", bg="#ECF0F1")
+user_input.pack(side=tk.LEFT, padx=10)
 
 # Sender dropdown menu
 sender_var = tk.StringVar(value="A")
@@ -61,15 +60,14 @@ def send_message():
     # Clear the input field
     user_input.delete(0, tk.END)
 
-def display_messages():
+def decrypt_message():
     # Get the current active user
     sender = sender_var.get()
+    receiver = "B" if sender == "A" else "A"
 
-    # Clear the chat log to display only relevant messages for the current user
+    # Loop through all messages and decrypt the ones for the current user
     chat_log.configure(state='normal')
-    chat_log.delete(1.0, tk.END)  # Clear existing content
 
-    # Loop through all messages and display only those for the current user
     for msg_sender, msg_receiver, encrypted_message, hmac_value in messages:
         if msg_receiver == sender:
             # Decrypt the message using the same AES key
@@ -84,8 +82,8 @@ def display_messages():
 send_button = tk.Button(window, text="Send", command=send_message, bg="#27AE60", fg="white", font=("Helvetica", 12), relief="solid", bd=2)
 send_button.pack(side=tk.LEFT, padx=10)
 
-# Button for user to decrypt message and update the chat log
-decrypt_button = tk.Button(window, text="Decrypt Messages", command=display_messages, bg="#E74C3C", fg="white", font=("Helvetica", 12), relief="solid", bd=2)
+# Button for user to decrypt message
+decrypt_button = tk.Button(window, text="Decrypt Messages", command=decrypt_message, bg="#E74C3C", fg="white", font=("Helvetica", 12), relief="solid", bd=2)
 decrypt_button.pack(side=tk.LEFT, padx=10)
 
 # Show the shared AES key (base64-encoded for display)
