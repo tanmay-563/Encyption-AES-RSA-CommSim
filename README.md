@@ -56,6 +56,7 @@ This project simulates secure chat using a **hybrid cryptography model**:
   pip install pycryptodome
   pip install numpy
   pip install tkinter
+  pip install nltk
 
 🧪 Run the App:
 bash
