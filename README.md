@@ -54,6 +54,8 @@ This project simulates secure chat using a **hybrid cryptography model**:
 - Required libraries:
   ```bash
   pip install pycryptodome
+  pip install numpy
+  pip install tkinter
 
 🧪 Run the App:
 bash
