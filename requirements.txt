@@ -3,4 +3,3 @@ nltk
 tkinter
 numpy
 pandas
-matplotlib
